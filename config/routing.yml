@@ -1,0 +1,3 @@
+sfCodeView:
+  url:   /sfCodeView/:class/:method
+  param: { module: sfCodeView, action: index, class: null, method: null}

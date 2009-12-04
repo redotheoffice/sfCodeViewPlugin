@@ -1,0 +1,78 @@
+sfCodeView plugin
+=================
+
+Learn coding by reading code!
+
+This plugin makes it easy to read your the code of any class in your project, reflect on the API of the symfony core or learn about the inner workings of a Symfony.
+
+WARNING: please make sure you never use this plugin in a production environment. Publishing your code can lead to severe security risks!!
+
+Overview
+--------
+
+`sfCodeView` is a symfony plugin that extends the debug bar with an option to interactively read the source code of your project.
+The plugin can optionally use the sfJQueryReloaded plugin. If this plugin is used the browser will use AJAX calls which will enable a smoother experience.
+
+Installation
+------------
+
+  * Install the plugin
+ 
+        > php symfony plugin:install sfCodeViewPlugin  # for symfony 1.2
+        
+  * Publish the plugin assets
+
+        > php symfony plugin:publish-assets
+
+  * Clear the cache
+
+        > php symfony cc
+
+  * Enable the `sfCodeView` module in settings.yml:
+
+        [yml]
+        all:
+          .settings:
+            enabled_modules:        [default, sfCodeView]
+
+  * To enable ajax interaction, jquery is needed. Install either a jQuery plugin
+(like sfJqueryReloadedPlugin) or add jquery from Google cdn in your view.yml:
+
+        [yml]
+        default:
+          javascripts:
+            - http://ajax.googleapis.com/ajax/libs/jquery/1.3./jquery.min.js
+
+Usage
+-----
+
+In `dev` mode the debug toolbar will be extended with a little input box. Type the name of a class in your project in there and the sfCodeView plugin will show you the code. That's all!
+
+Options
+-------
+
+You can add/override the javascripts / stylesheets included in this plugin by overriding the plugin's app.yml:
+
+    [yml]
+    all:
+      sfCodeViewPlugin:
+          stylesheets:  ['/sfCodeViewPlugin/css/sfCodeViewPlugin.css']
+          javascripts:  ['/sfCodeViewPlugin/js/sfCodeViewPlugin.js']
+       
+This allows you to easily give your transformed forms custom styles
+
+TODO / Ideas
+------------
+ 
+Changelog
+---------
+
+### 2009-12-03 | 1.1 stable
+
+* made the plugin sf 1.3 and 1.4 compatible
+* added method docblock as a title for class methods
+* tested in firefox, chrome and ie, works ok in chrome&firefox, ie works but is not as nice as in chrome or firefox
+
+### 2009-05-06 | 1.0 stable
+
+* weett: initial import

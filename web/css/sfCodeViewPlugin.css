@@ -1,0 +1,166 @@
+div#methodindex
+{
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 550px;
+  width: 100px;
+  border: 1px solid black;
+  opacity: 0.1;
+}
+
+div#methodindex:hover
+{
+  overflow-y: scroll;
+  background: white;
+  width: auto;
+  opacity: 1;
+}
+
+ul.methods
+{
+  width: 10000px;
+}
+div#methodindex:hover ul.methods
+{
+  width: auto;
+}
+ul.methods div.filename
+{
+  color: black;
+  font-weight: bold;  
+  background: #eee;  
+}
+
+ul.methods li
+{
+  width: auto;
+  overflow: visible;
+}
+
+ul.methods .inherited
+{
+/*  display:block;*/
+  margin-left: 10px;
+  opacity: 0.75;
+}
+
+
+#livetip {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  background-color: #fff;
+  border: 2px solid #99c;
+}
+
+
+/*SOURCE CSS*/
+
+pre.source {
+  background-color: white;
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+}
+
+pre.source ol
+{
+  margin-left: 3em;
+  border: 1px solid #888;
+}
+
+pre.source ol li.filename, pre.source ol li.doc_comment
+{
+  border-bottom: 1px solid #888;
+  list-style-type: none;
+}
+
+pre.source ol li.filename a
+{
+  color: black;
+  font-weight: bold;  
+}
+pre.source ol li.filename
+{
+  background: #eee;
+  padding: 2px;
+}
+
+pre.source ol li.doc_comment
+{
+  font-style: italic;
+}
+
+pre.source span.T_SWITCH,
+pre.source span.T_CASE,
+pre.source span.T_DEFAULT,
+pre.source span.T_REQUIRE,
+pre.source span.T_REQUIRE_ONCE,
+pre.source span.T_CLONE,
+pre.source span.T_UNSET,
+pre.source span.T_WHILE,
+pre.source span.T_BREAK,
+pre.source span.T_CONTINUE,
+pre.source span.T_THROW,
+pre.source span.T_CONST,
+pre.source span.T_ABSTRACT,
+pre.source span.T_FINAL,
+pre.source span.T_PUBLIC,
+pre.source span.T_PROTECTED,
+pre.source span.T_PRIVATE,
+pre.source span.T_STATIC,
+pre.source span.T_FUNCTION,
+pre.source span.T_RETURN,
+pre.source span.T_TRY,
+pre.source span.T_CATCH,
+pre.source span.T_FINALLY,
+pre.source span.T_CLASS,
+pre.source span.T_EXTENDS,
+pre.source span.T_IMPLEMENTS,
+pre.source span.T_INSTANCEOF,
+pre.source span.T_NEW,
+pre.source span.T_IF,
+pre.source span.T_ELSE,
+pre.source span.T_ELSEIF,
+pre.source span.T_FOREACH,
+pre.source span.T_AS,
+pre.source span.T_LIST,
+pre.source span.T_DOUBLE_ARROW,
+pre.source span.T_OBJECT_OPERATOR,
+pre.source span.T_BOOL_CAST
+{ 
+  color: blue; 
+  font-weight: bold;
+}
+
+pre.source span.T_VARIABLE
+{
+  color: teal;
+}
+pre.source span.T_STRING
+{
+  color: royalblue;
+}
+pre.source span.T_ARRAY
+{
+  color: slategray;
+}
+pre.source span.T_CONSTANT_ENCAPSED_STRING
+{
+  color: green;
+  font-family: monospace;
+}
+
+pre.source span.T_COMMENT,
+pre.source span.T_DOC_COMMENT
+{
+  color: CornflowerBlue;
+  font-style: italic;
+} 
+pre.source span.T_LNUMBER
+{
+  color: purple;
+}
