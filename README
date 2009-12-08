@@ -51,28 +51,56 @@ In `dev` mode the debug toolbar will be extended with a little input box. Type t
 Options
 -------
 
-You can add/override the javascripts / stylesheets included in this plugin by overriding the plugin's app.yml:
+The following options are available (all in `app.yml`), all options displayed are the
+defaults, specified in the plugins `app.yml`:
+
 
     [yml]
     all:
       sfCodeViewPlugin:
-          stylesheets:  ['/sfCodeViewPlugin/css/sfCodeViewPlugin.css']
-          javascripts:  ['/sfCodeViewPlugin/js/sfCodeViewPlugin.js']
+        stylesheets:
+          - '/sfCodeViewPlugin/css/sfCodeViewPlugin.css'
+        javascripts:
+          - '/sfCodeViewPlugin/js/sfCodeViewPlugin.js'
+        recurse_vendor_dirs:    false
+        cache_in_user_session:  sfCodeViewPlugin_cache_content
+
        
-This allows you to easily give your transformed forms custom styles
+  * You can add/override the javascripts / stylesheets included in this plugin by overriding the plugin's app.yml.
+    This allows you to easily give your transformed forms custom styles
+
+  * `recurse_vendor_dirs` specifies if you also want read the classes inside `vendor`
+    directories in your project. Setting this to `true` can take a lot of time to load, for
+    instance when you have a full 'Zend' library in your `/lib/vendor/Zend`.
+    
+  * for speeding up the script, specify a key at `cache_in_user_session`, all classes will
+    only loaded at the first request of the current session/user and will then be stored
+    in the session using the specified key. If you want to reload the classes, close your
+    browser and reload in a new one. Use 'false' to disable the cache.
 
 TODO / Ideas
 ------------
  
+  * integrate links to the symfony core test files, as they provide a lot of information
+    about how to use the classes
+
 Changelog
 ---------
 
+### 2009-12-08 | 1.1.1 stable
+
+  * added cache_in_user_session setting to app.yml
+  * added recurse_vendor_dirs setting to app.yml
+  * changed package.xml to accept version of history between 1.3.0 and 2.0.0
+  * fixed loading of user classes, now exclude vendor directory
+  * fixed CSS
+
 ### 2009-12-03 | 1.1 stable
 
-* made the plugin sf 1.3 and 1.4 compatible
-* added method docblock as a title for class methods
-* tested in firefox, chrome and ie, works ok in chrome&firefox, ie works but is not as nice as in chrome or firefox
+  * made the plugin sf 1.3 and 1.4 compatible
+  * added method docblock as a title for class methods
+  * tested in firefox, chrome and ie, works ok in chrome&firefox, ie works but is not as nice as in chrome or firefox
 
 ### 2009-05-06 | 1.0 stable
 
-* weett: initial import
+  * weett: initial import

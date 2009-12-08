@@ -1,3 +1,13 @@
+pre.source
+{
+  text-align: left;
+}
+
+pre.source li
+{
+  list-style-type: decimal;
+}
+
 div#methodindex
 {
   position: fixed;
@@ -9,6 +19,7 @@ div#methodindex
   width: 100px;
   border: 1px solid black;
   opacity: 0.1;
+  text-align: left;
 }
 
 div#methodindex:hover

@@ -1,4 +1,8 @@
 all:
   sfCodeViewPlugin:
-    stylesheets:  ['/sfCodeViewPlugin/css/sfCodeViewPlugin.css']
-    javascripts:  ['/sfCodeViewPlugin/js/sfCodeViewPlugin.js']
+    stylesheets:
+      - '/sfCodeViewPlugin/css/sfCodeViewPlugin.css'
+    javascripts:
+      - '/sfCodeViewPlugin/js/sfCodeViewPlugin.js'
+    recurse_vendor_dirs:    false
+    cache_in_user_session:  sfCodeViewPlugin_cache_content

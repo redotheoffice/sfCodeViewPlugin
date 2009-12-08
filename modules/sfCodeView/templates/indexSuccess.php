@@ -1,6 +1,6 @@
 <?php
   try {
-    use_helper('jQuery');
+    @use_helper('jQuery');
   } catch (Exception $e) { 
   }
   

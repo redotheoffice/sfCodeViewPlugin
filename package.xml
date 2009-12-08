@@ -12,19 +12,23 @@
     <active>yes</active>
   </lead>
 
-  <date>2009-12-03</date>
-  <version>
-    <release>1.1.0</release>
-    <api>1.0.0</api>
-  </version>
-  <stability>
-    <release>stable</release>
-    <api>stable</api>
-  </stability>
-  <license uri="http://www.symfony-project.org/license">MIT license</license>
-  <notes>
-    * updated for symfony 1.3 and 1.4
-  </notes>
+    <date>2009-12-08</date>
+    <version>
+      <release>1.1.1</release>
+      <api>1.0.0</api>
+    </version>
+    <stability>
+      <release>stable</release>
+      <api>stable</api>
+    </stability>
+    <license uri="http://www.symfony-project.org/license">MIT license</license>
+    <notes>
+      * added cache_in_user_session setting to app.yml
+      * added recurse_vendor_dirs setting to app.yml
+      * changed package.xml to accept version of history between 1.3.0 and 2.0.0
+      * fixed loading of user classes, now exclude vendor directory
+      * fixed CSS
+    </notes>
 
   <contents>
     <dir name="/">
@@ -84,6 +88,25 @@
   <phprelease></phprelease>
   
   <changelog>
+    <release>
+      <date>2009-12-08</date>
+      <version>
+        <release>1.1.1</release>
+        <api>1.0.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license uri="http://www.symfony-project.org/license">MIT license</license>
+      <notes>
+        * added cache_in_user_session setting to app.yml
+        * added recurse_vendor_dirs setting to app.yml
+        * changed package.xml to accept version of history between 1.3.0 and 2.0.0
+        * fixed loading of user classes, now exclude vendor directory
+        * fixed CSS
+      </notes>
+    </release>
     <release>
       <date>2009-12-03</date>
       <version>
